@@ -1,0 +1,18 @@
+syntax = "proto3";
+package unary;
+
+service ProfessionalUnary{
+  rpc GetProContactInfo(ProId) returns (ContactDetails) {}
+}
+
+message ProId{
+  int32 pro_id = 1;
+}
+
+message ContactDetails{
+  string phone_number = 1;
+  string email = 2;
+  string website = 3;
+  string instagram_handle = 4;
+  string diveplus_handle = 5;
+}
